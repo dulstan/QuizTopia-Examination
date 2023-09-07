@@ -79,19 +79,26 @@ function LogInPage(){
 
     return(
         
-        <div className="loginForm">
+        <div >
+            <article className="showQuizzes-container">
             <UserQuizList/>
-            <h1>Logga In</h1>
+
+            </article>
+
+            <div className="loginForm">
+            <h1>Make Your Own Quiz</h1>
             <section className="row">
                 
             <input className="user-input" placeholder="User Name" value={username} onChange={event => SetUserName(event.target.value)}></input>
             <input className="user-input" placeholder="PassWord" value={password} onChange={event => SetPassWord(event.target.value)}></input>
             </section>
             <div className="Login-input">
-						<button className="create-button" onClick={handleCreateUser}> Skapa användare </button>
-						<button className="login-button"onClick={handleLogin}> Logga in </button>
+						<button className="create-button" onClick={handleCreateUser}> Sign up</button>
+						<button className="login-button"onClick={handleLogin}> Log in  </button>
 			</div>
 			<p> {message} </p>
+            </div>
+            
         </div>
     )
 }

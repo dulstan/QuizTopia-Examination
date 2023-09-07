@@ -1,12 +1,10 @@
 
 
 .loginForm{
-    font-size: large;
+    font-size: small;
     color: rgb(194, 201, 247);
     letter-spacing: 4px;
     word-spacing: 5px;
-    width:430px;
-    height: 600px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
@@ -14,6 +12,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 500px;
+    margin: 30px auto ;
+   padding: 2rem;
 }
 .row{
     display: grid;
@@ -36,24 +37,14 @@
 }
 
 
-.create-button {
-    background-color: rgb(234, 242, 242);
+.create-button, .login-button {
+    background-color: rgb(193, 175, 213);
     margin: 10px;
     border-radius: 10px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     letter-spacing: 1px;
     font-weight: bold;
     width: 300px;
     height: 40px;
 }
-.login-button{
-    background-color: rgb(234, 242, 242);
-    margin: 10px;
-    border-radius: 10px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 2px;
-    font-weight: bold;
-    width: 300px;
-    height: 40px;
-    
-}
+

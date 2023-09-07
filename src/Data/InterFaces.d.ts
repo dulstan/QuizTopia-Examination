@@ -5,7 +5,6 @@ export interface ApiQuizesQuestionresponse{
         latitude:number,
         longitude:number
     }
-    
 }
 export interface QuizesResponse {
         questions:ApiQuizesQuestionresponse[];
@@ -20,4 +19,17 @@ export interface ApiGetQuizesresponse{
 }
 
 type  SaveResponseQuizes =  React.Dispatch<React.SetStateAction<QuizesResponse[]>>
+export interface Position {
+    latitude: number;
+    longitude: number;
+  }
 
+ export interface ApiCreateQuizresponse{
+    success:boolean;
+    quizId: string;
+}
+
+export interface ApiQuestionresponse {
+	success: boolean;
+	error: string;
+}

@@ -1,9 +1,5 @@
 
-interface Position{
-    latitude: number;
-	longitude: number;
-}
-
+import { Position } from "../Data/InterFaces";
 
 type ReactSetState<T>= React.Dispatch<React.SetStateAction<T>>
 

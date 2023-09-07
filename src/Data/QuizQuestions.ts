@@ -1,9 +1,5 @@
-//import { useState } from "react"
 
-interface ApiQuestionresponse {
-	success: boolean;
-	error: string;
-}
+import { ApiQuestionresponse } from "./InterFaces"
 
 
 

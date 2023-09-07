@@ -1,10 +1,6 @@
 import { Dispatch } from "react";
-//import { useState } from "react";
+import { ApiGetQuizesresponse, ApiCreateQuizresponse } from "./InterFaces";
 
-interface ApiCreateQuizresponse{
-    success:boolean;
-    quizId: string;
-}
 
 const handleCreateQuiz=async (quizname:string, setQuizElemInput: Dispatch<React.SetStateAction<boolean>>) =>  {
     

@@ -1,36 +1,20 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { handleCreateQuiz, handleGetQuizez, handleGetQuizzes } from "../../Data/QuizApi";
+import { handleCreateQuiz, handleGetQuizzes } from "../../Data/QuizApi";
 import { getPosition } from "../../helper/geolocation";
 
 import { handleAddQuestion } from "../../Data/QuizQuestions";
-
+import { Position } from "../../Data/InterFaces";
 import { useState, useRef, useEffect } from "react";
 import mapboxgl, { Map as MapGl } from "mapbox-gl";
-//import Map, {Marker} from 'react-map-gl';
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./createQuiz.css";
-import { ApiGetQuizesresponse } from "../../Data/InterFaces";
-// interface ApiCreateQuizResponse{
-//     success: boolean;
-// 	quizId: string;
-// }
 
-interface Position {
-  latitude: number;
-  longitude: number;
-}
-// interface ApiQuestionresponse {
-// 	success: boolean;
-// 	error: string;
-// }
 
 mapboxgl.accessToken = import.meta.env.VITE_MAP_API_KEY as string;
-//console.log('Kontrollera att access token hittas: ', import.meta.env.VITE_MAP_API_KEY);
 
 function CreateQuiz() {
   const [quizElemInput, setQuizElemInput] = useState<boolean>(false);
-  const [position, setPosition] = useState<Position | null >(null);
+  const [position, setPosition] = useState<Position | null>(null);
   const [question, setQuestion] = useState<string>("");
   const [answer, setAnswer] = useState<string>("");
   const [quizname, setQuizName] = useState<string>("");
@@ -41,50 +25,38 @@ function CreateQuiz() {
   const [lng, setLng] = useState<number>(11.89);
   const [zoom, setZoom] = useState<number>(10);
 
-
-
-
-
-
   useEffect(() => {
     if (mapRef.current || !mapContainer.current) return;
-    if (position !== null){
-    
+    if (position !== null) {
       // console.log('qusssss', qu)
-    mapRef.current = new MapGl({
-      container: mapContainer.current,
-      style: "mapbox://styles/dulkut2001/clm4n8mel00tl01pjfyzbfwzh",
-      center: [position.longitude, position.latitude],
-      zoom: 9,
-      logoPosition: "bottom-left",
-    });
-    const map: MapGl = mapRef.current;
+      mapRef.current = new MapGl({
+        container: mapContainer.current,
+        style: "mapbox://styles/dulkut2001/clm4n8mel00tl01pjfyzbfwzh",
+        center: [position.longitude, position.latitude],
+        zoom: 9,
+        logoPosition: "bottom-left",
+      });
+      const map: MapGl = mapRef.current;
 
-    map.on("move", () => {
-      interface Position {
-        lng: number;
-        lat: number;
-      }
-      const position: Position = map.getCenter();
-      setLat(Number(position.lat.toFixed(4)));
-      setLng(Number(position.lng.toFixed(4)));
-      setZoom(map.getZoom());
-    });
-  new mapboxgl.Marker({
-   color: "red",
-   anchor: "bottom",
- })
-   .setLngLat([position.longitude, position.latitude])
-   .addTo(map);
+      map.on("move", () => {
+        interface Position {
+          lng: number;
+          lat: number;
+        }
+        const position: Position = map.getCenter();
+        setLat(Number(position.lat.toFixed(4)));
+        setLng(Number(position.lng.toFixed(4)));
+        setZoom(map.getZoom());
+      });
+      new mapboxgl.Marker({
+        color: "red",
+        anchor: "bottom",
+      })
+        .setLngLat([position.longitude, position.latitude])
+        .addTo(map);
+    }
+  }, [position, zoom]);
 
-}
-    
-
-  }, [position]);
-
- 
-
-  
   return (
     <div className="createQuiz-page">
       <h4>QUIZTOPIA</h4>
@@ -138,10 +110,10 @@ function CreateQuiz() {
       <p className="center-position">
         Here You Are! {position?.latitude} {position?.longitude}
       </p>
-      <p className="center-position">
+      {/* <p className="center-position">
         {" "}
         Center position: {lat} lat, {lng} lng{" "}
-      </p>
+      </p> */}
       <div className="mapbox" ref={mapContainer} />
     </div>
   );
