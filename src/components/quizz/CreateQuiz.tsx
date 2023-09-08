@@ -28,7 +28,6 @@ function CreateQuiz() {
   useEffect(() => {
     if (mapRef.current || !mapContainer.current) return;
     if (position !== null) {
-      // console.log('qusssss', qu)
       mapRef.current = new MapGl({
         container: mapContainer.current,
         style: "mapbox://styles/dulkut2001/clm4n8mel00tl01pjfyzbfwzh",
@@ -110,10 +109,7 @@ function CreateQuiz() {
       <p className="center-position">
         Here You Are! {position?.latitude} {position?.longitude}
       </p>
-      {/* <p className="center-position">
-        {" "}
-        Center position: {lat} lat, {lng} lng{" "}
-      </p> */}
+     
       <div className="mapbox" ref={mapContainer} />
     </div>
   );
