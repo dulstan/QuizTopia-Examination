@@ -27,8 +27,9 @@
     color: #fff;
     border: none;
     cursor: pointer;
+    overflow: hidden;
     width: 150px;
-    height: auto;
+    height: 60px;
     font-family: 'Times New Roman', Times, serif;
   }
   

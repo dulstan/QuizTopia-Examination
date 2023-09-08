@@ -18,12 +18,12 @@ export const UserQuizList = () => {
     <div className='showQuizzes-container' >
       <h1>Here is all the quizzes</h1>
         {quizzes ? <div className="quiz-grid">
-            {quizzes.quizzes.map((ques) => {
-              const info = ques.questions.find((test) => test )
-                return <div className="quiz-item">
+            {quizzes.quizzes.map((ques,index) => {
+              const info = ques.questions.find((info) => info )
+                return <div key={index} className="quiz-item" >
                   <button className='quiz-button' onClick={() => 
                     navigate('/showQuizzes',  { state: { question: info?.question, answer: info?.answer, latitude: info?.location.latitude, longitude: info?.location.longitude  } })}>
-                  {ques.quizId} made by: {ques.username}
+                  {ques.quizId} <br></br>made by: {ques.username}
                   </button>
                 </div>
             })}

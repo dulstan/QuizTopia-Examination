@@ -2,8 +2,8 @@ export interface ApiQuizesQuestionresponse{
     question:string
     answer:string
     location:{
-        latitude:number,
-        longitude:number
+        latitude:string,
+        longitude:string
     }
 }
 export interface QuizesResponse {
