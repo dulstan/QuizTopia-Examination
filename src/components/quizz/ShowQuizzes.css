@@ -7,7 +7,17 @@
     color: rgba(185, 178, 241, 0.6);
 }
 .goBack-button{
-    margin-top: 50px;
+    margin: 50px;
+    background-color: rgb(193, 175, 213);
+    border-radius: 10px;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-weight:bolder;
+    width: 200px;
+    height: 40px;
+}
+.showOnMap-button{
+    margin: 50px;
     background-color: rgb(193, 175, 213);
     border-radius: 10px;
     font-family:'Times New Roman', Times, serif;

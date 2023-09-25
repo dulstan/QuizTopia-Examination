@@ -23,7 +23,7 @@ const handleCreateQuiz=async (quizname:string, setQuizElemInput: Dispatch<React.
     const data: ApiCreateQuizresponse=await response.json()
     setQuizElemInput(true)
 
-    console.log( '12334455',data)
+    // console.log( '12334455',data)
 
     let quizId =data.quizId
 
@@ -45,25 +45,9 @@ const handleGetQuizzes=async( ): Promise<ApiGetQuizesresponse>=>{
     const response =await fetch(URL, settings)
     const data= await response.json()
     return data
-    console.log(data)
+    // console.log(data)
  
 }
 
 
 export {handleCreateQuiz, handleGetQuizzes}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

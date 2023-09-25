@@ -3,26 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 import './LogIn.css'
 import { UserQuizList } from "../quizz/UserQuizList";
+import {ApiSignupResponse, ApiLoginResponse}from '../../Data/InterFaces'
 
-interface ApiSignupResponse {
-	success: boolean;
-	message?: string;
-}
-interface ApiLoginResponse {
-	success: boolean;
-	message?: string;
-	token?: string;
-}
-// interface ApiAccountResponse {
-// 	success: boolean;
-// 	message?: string;
-// 	account?: Account;
-// }
-// interface Account {
-// 	password: string;
-// 	userId: string;
-// 	username: string;
-// }
+
 
 function LogInPage(){
 

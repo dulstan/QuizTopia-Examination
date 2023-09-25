@@ -3,7 +3,7 @@ import { ApiQuestionresponse } from "./InterFaces"
 
 
 
-const handleAddQuestion=async(question:string, answer:string, lng:number, lat:number )=>{
+const handleAddQuestion=async(question:string, answer:string, lng:any, lat:any )=>{
     
 
     const quizId=localStorage.getItem('quizId')

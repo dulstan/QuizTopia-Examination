@@ -6,6 +6,7 @@ import './UserQuizList.css'
 export const UserQuizList = () => {
   const [quizzes, setQuizzes] = React.useState<ApiGetQuizesresponse>()
   const navigate = useNavigate();
+
     const getData = async() => {
         const data = await handleGetQuizzes();
         setQuizzes(data)
@@ -14,6 +15,7 @@ export const UserQuizList = () => {
         getData();
         
       }, [])
+  console.log('object--', quizzes)
   return (
     <div className='showQuizzes-container' >
       <h1>Here is all the quizzes</h1>
@@ -22,7 +24,7 @@ export const UserQuizList = () => {
               const info = ques.questions.find((info) => info )
                 return <div key={index} className="quiz-item" >
                   <button className='quiz-button' onClick={() => 
-                    navigate('/showQuizzes',  { state: { question: info?.question, answer: info?.answer, latitude: info?.location.latitude, longitude: info?.location.longitude  } })}>
+                    navigate('/showQuizzes',  { state: { location: info?.location, question: info?.question, answer: info?.answer, latitude: info?.location.latitude, longitude: info?.location.longitude  } })}>
                   {ques.quizId} <br></br>made by: {ques.username}
                   </button>
                 </div>
@@ -31,5 +33,3 @@ export const UserQuizList = () => {
     </div>
   )
 }
-
-

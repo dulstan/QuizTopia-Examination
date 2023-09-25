@@ -1,3 +1,12 @@
+export interface ApiSignupResponse {
+	success: boolean;
+	message?: string;
+}
+export interface ApiLoginResponse {
+	success: boolean;
+	message?: string;
+	token?: string;
+}
 export interface ApiQuizesQuestionresponse{
     question:string
     answer:string
@@ -19,6 +28,7 @@ export interface ApiGetQuizesresponse{
 }
 
 type  SaveResponseQuizes =  React.Dispatch<React.SetStateAction<QuizesResponse[]>>
+
 export interface Position {
     latitude: number;
     longitude: number;
