@@ -11,13 +11,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/showQuizzes",
-    element: <ShowQuizzes/>
+    element: <ShowQuizzes />,
   },
   {
     path: "/createquiz",
     element: <CreateQuiz />,
-  }, 
-
+  },
 ]);
 
 function App() {

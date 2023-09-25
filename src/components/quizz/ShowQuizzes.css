@@ -1,4 +1,5 @@
-.ShowInfo-container{
+
+.ShowInfo-container {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 40px rgba(101, 85, 219, 0.6);
     padding: 10px;
@@ -6,34 +7,32 @@
     font-size: 10px;
     color: rgba(185, 178, 241, 0.6);
 }
-.goBack-button{
+
+.goBack-button {
     margin: 50px;
     background-color: rgb(193, 175, 213);
     border-radius: 10px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     letter-spacing: 1px;
-    font-weight:bolder;
-    width: 200px;
-    height: 40px;
-}
-.showOnMap-button{
-    margin: 50px;
-    background-color: rgb(193, 175, 213);
-    border-radius: 10px;
-    font-family:'Times New Roman', Times, serif;
-    letter-spacing: 1px;
-    font-weight:bolder;
+    font-weight: bolder;
     width: 200px;
     height: 40px;
 }
 
+.showOnMap-button {
+    margin: 50px;
+    background-color: rgb(193, 175, 213);
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    width: 200px;
+    height: 40px;
+}
 
-
-
-
-@media (max-width: 1000px ) {
+@media (max-width: 1000px) {
     .ShowInfo-container {
-        width: 100%; /* Adjust the width for smaller screens */
-        font-size: 10px;    }
-  }
-
+        width: 100%;
+        font-size: 10px;
+    }
+}

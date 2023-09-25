@@ -1,7 +1,6 @@
-
 .createQuiz-page h4 {
     margin: 0;
-    font-size:xx-large;
+    font-size: xx-large;
     color: rgb(204, 170, 242);
 }
 
@@ -12,8 +11,8 @@
     width: 250px;
     height: 40px;
     border-radius: 10px;
-    border:none; 
-    font-family:'Times New Roman', Times, serif;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: large;
 }
@@ -22,17 +21,19 @@
     background-color: rgb(193, 175, 213);
     margin: 10px;
     border-radius: 10px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     letter-spacing: 1px;
     font-weight: bold;
     width: 250px;
     height: 40px;
 }
-.center-position{
+
+.center-position {
     color: rgb(204, 170, 242);
-    font-weight:bolder ;
+    font-weight: bolder;
 }
-.mapbox{
+
+.mapbox {
     width: 100%;
     height: 400px;
     border-radius: 70px;
